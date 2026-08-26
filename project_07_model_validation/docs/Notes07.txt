@@ -1,0 +1,5 @@
+This script shows the model validation between real Argo float ocean observations and HYCOM supercomputer predictions where the data was extracted from the Ifremer Argo server and a HYCOM server. HYCOM and Argo data were used together for numerical models to test ocean computer simulations.
+Firstly we get the data from the servers, then we isolate the real float's location (LATITUDE, LONGITUDE) and slice the model profile at the corresponding time and depth.
+We apply longitude conversion (obs_lon + 360) to match coordinate systems and use method='nearest' to select the closest model grid point to the float's actual GPS position.
+We use plt.plot to display vertical temperature profiles where real Argo observations are black connected dots (ko-) and HYCOM model predictions are a solid red line (r-).
+Finally we lock the vertical view scale between 1,000 meters to 0 meters with (plt.ylim(1000, 0)) and invert the Y-axis (invert_yaxis()) to easily evaluate how well the model mimics real ocean layering.
