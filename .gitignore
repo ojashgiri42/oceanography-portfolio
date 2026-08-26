@@ -1,0 +1,61 @@
+# ============================================================
+# Ocean Science Portfolio — Git Ignore
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Finder metadata
+._*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python environments
+.venv/
+venv/
+env/
+ENV/
+
+# Scientific data files
+*.nc
+*.nc4
+*.h5
+*.hdf5
+*.grib
+*.grib2
+*.grb
+
+# Temporary / cache files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.log
+
+# OS / editor files
+.vscode/
+.idea/
+
+# Temporary notebooks / files
+Untitled.ipynb
+untitled.ipynb
+untitled.txt
+
+# Python distribution
+build/
+dist/
+*.egg-info/
+
+# Secrets / credentials
+.env
+.env.*
+!.env.example
