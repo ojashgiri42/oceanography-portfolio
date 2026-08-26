@@ -10,7 +10,7 @@ A collection of 13 reproducible computational projects bridging **physical ocean
 | :--- | :--- | :--- |
 | **01. Argo Hydrography** | In-Situ Observations | Processing global Argo float NetCDF profiles; computing temperature-salinity (T-S) diagrams and Mixed Layer Depth (MLD). |
 | **02. Ocean Circulation** | Satellite Remote Sensing | Extracting regional sea surface temperature (SST) grids via OPeNDAP to visualize Gulf Stream current boundaries. |
-| **03. Satellite Ocean Color** | Biogeochemistry | Analyzing MODIS/Copernicus chlorophyll-$a$ data with logarithmic color scaling to map coastal phytoplankton blooms. |
+| **03. Satellite Ocean Color** | Biogeochemistry | Satellite-Based Assessment of Chlorophyll-a Variability in the Arabian Sea Using MODIS-Aqua Ocean Color Data. |
 | **04. Coastal Bathymetry GIS** | Topography & GIS | Rendering high-resolution seafloor relief and trench morphology using ETOPO global bathymetry datasets. |
 | **05. Coastal Hydrodynamics** | Numerical Modeling | Streaming HYCOM velocity components to map geostrophic current vectors and oceanic kinetic energy fields. |
 | **06. Sediment Transport** | Coastal Engineering | Computing seabed bottom shear stress ($\tau_b$) and dynamic erosion thresholds for sediment mobilization. |
@@ -20,7 +20,7 @@ A collection of 13 reproducible computational projects bridging **physical ocean
 | **10. Machine Learning Forecast** | AI / Data Science | Training a Random Forest Regressor with lag-feature engineering to forecast future ocean temperature anomalies. |
 | **11. Satellite Altimetry & Eddies** | Remote Sensing & Dynamics | Deriving geostrophic velocity vectors ($u_g, v_g$) and Eddy Kinetic Energy (EKE) from Sea Surface Height ($\eta$) gradients. |
 | **12. Marine Heatwaves (MHW)** | Climate Extremes | Processing 30-year SST baselines to detect, quantify, and categorize Marine Heatwaves using the Hobday et al. framework. |
-| **13. BGC-Argo Carbon Pump** | Biogeochemistry | Analyzing vertical profiles of oxygen, nitrate, and chlorophyll-$a$ to compute Apparent Oxygen Utilization (AOU) and carbon remineralization. |
+| **13. BGC-Argo Carbon Pump** | Biogeochemistry | Analyzing vertical profiles of oxygen, nitrate, and chlorophyll-a to compute Apparent Oxygen Utilization (AOU) and carbon remineralization. |
 
 ---
 
@@ -30,16 +30,8 @@ A collection of 13 reproducible computational projects bridging **physical ocean
 * **Data Access & Streaming:** OPeNDAP / THREDDS Cloud Servers, NetCDF4, Xarray
 * **Numerical Computing & Analysis:** NumPy, Pandas, SciPy
 * **Geospatial & Visualization:** Cartopy, Matplotlib, Seaborn
-* **Machine Learning & Signal Processing:** Scikit-Learn (Random Forest regression, feature engineering, time-series analysis)
+* **Machine Learning & Signal Processing:** Scikit-Learn (Random Forest regression, time-series analysis)
 * **Version Control & Reproducibility:** Git, GitHub, Jupyter Lab
-
----
-
-## 🚀 Reproducibility & Data Architecture
-
-To maintain a lightweight repository and adhere to software engineering best practices, **raw oceanographic data files (`.nc`) and large numerical outputs are excluded from version control via `.gitignore`**. 
-
-Every notebook in this portfolio connects directly to open-access cloud data servers or includes inline data generation scripts, ensuring 100% execution reproducibility across any machine.
 
 ---
 

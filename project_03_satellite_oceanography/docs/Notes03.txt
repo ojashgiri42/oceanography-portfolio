@@ -1,5 +1,9 @@
-In the Arabian Sea, chlorophyll concentrations surge during monsoon seasons when strong wind-driven upwelling delivers nutrient-rich subsurface water into the sunlit surface layer. This script downloads and maps MODIS-Aqua satellite Chlorophyll-a observations across the Arabian Sea using NOAA ERDDAP data services. Remote sensing of ocean color allows oceanographers to monitor regional biological productivity and monsoon-driven coastal upwelling.
+In the Arabian Sea, chlorophyll concentrations surge during monsoon seasons when strong wind-driven upwelling delivers nutrient-rich subsurface water into the sunlit surface layer. This script downloads and maps MODIS-Aqua satellite Chlorophyll-a observations across the Arabian Sea using NOAA ERDDAP data services. Remote sensing of ocean color allows to monitor regional biological productivity and monsoon-driven coastal upwelling.
+
 Firstly we construct a RESTful query targeting the NOAA PIFSC ERDDAP server for the 8-day composite dataset (aqua_chla_8d_2018_0.csv) on June 1, 2021.We apply spatial downsampling (:5: stride step) directly within the URL request to stream a compact CSV payload across the specified bounding box.
+
 We read the response using Pandas (StringIO), drop header unit rows (skiprows=[1]), coerce missing data strings into numeric values, and filter out non-positive observations (chlor_a > 0).
+
 We set up a Cartopy geospatial map (PlateCarree), add geographic features (LAND, COASTLINE, BORDERS), and plot observations using ax.scatter.
-Finally, we apply logarithmic normalization (LogNorm(vmin=0.05, vmax=10)) to visualize chlorophyll variations across two orders of magnitude ($0.05\text{--}10.0\text{ mg m}^{-3}$) and export the map at 300 DPI.
+
+Finally, we apply logarithmic normalization (LogNorm(vmin=0.05, vmax=10)) to visualize chlorophyll variations across two orders of magnitude.
